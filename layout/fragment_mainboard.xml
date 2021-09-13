@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:padding="30dp"
+    tools:context=".AdminBase.MainboardFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMenu"
+            android:layout_width="236dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Dashboard Menu"
+            android:textSize="24sp"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+        <ImageView
+            android:id="@+id/ivLogout"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:onClick="logout"
+            app:srcCompat="@drawable/ic_exit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/muli_black"
+            android:text="Space Allocation and Optimization"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="36sp" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_create" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/muli"
+            android:text="Admin Base"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack" />
+
+        <LinearLayout
+            android:layout_width="307dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlVenue_btn"
+                android:layout_width="140dp"
+                android:layout_height="113dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/theatre_btn"
+                app:layout_constraintTop_toBottomOf="@+id/tvMenu"
+                app:layout_constraintVertical_bias="0.094">
+
+                <ImageView
+                    android:id="@+id/ivVenue"
+                    android:layout_width="113dp"
+                    android:layout_height="79dp"
+                    android:onClick="venue"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-13dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="-13dp"
+                    app:srcCompat="@drawable/office_building_icon" />
+
+                <TextView
+                    android:id="@+id/tvVenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:drawableEnd="@drawable/ic_keyboard_a"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Venues"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlModule_btn"
+                android:layout_width="140dp"
+                android:layout_height="113dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/modules_btn">
+
+                <ImageView
+                    android:id="@+id/ivModules"
+                    android:layout_width="113dp"
+                    android:layout_height="79dp"
+                    android:onClick="modules"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-13dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="-13dp"
+                    app:srcCompat="@drawable/study_icon" />
+
+                <TextView
+                    android:id="@+id/tvModules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:drawableEnd="@drawable/ic_keyboard_a"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Modules"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="302dp"
+            android:layout_height="119dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlLogs_btn"
+                android:layout_width="140dp"
+                android:layout_height="113dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/log_btn"
+                app:layout_constraintTop_toBottomOf="@+id/rlVenue_btn"
+                app:layout_constraintVertical_bias="0.108">
+
+                <ImageView
+                    android:id="@+id/ivUserLog"
+                    android:layout_width="113dp"
+                    android:layout_height="79dp"
+                    android:onClick="logs"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-13dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="-13dp"
+                    app:srcCompat="@drawable/security" />
+
+                <TextView
+                    android:id="@+id/tvUserLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:drawableEnd="@drawable/ic_keyboard_a"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="User Logs"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlBooking_btn"
+                android:layout_width="140dp"
+                android:layout_height="113dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/booking_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlModule_btn"
+                app:layout_constraintVertical_bias="0.11">
+
+                <ImageView
+                    android:id="@+id/ivBooking"
+                    android:layout_width="113dp"
+                    android:layout_height="79dp"
+                    android:onClick="allocating"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-13dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="-13dp"
+                    app:srcCompat="@drawable/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/tvBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:drawableEnd="@drawable/ic_keyboard_a"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Booking"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rlStats_btn"
+                android:layout_width="140dp"
+                android:layout_height="113dp"
+                android:background="@drawable/stats_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlLogs_btn"
+                app:layout_constraintVertical_bias="0.004">
+
+                <ImageView
+                    android:id="@+id/ivStats"
+                    android:layout_width="113dp"
+                    android:layout_height="79dp"
+                    android:onClick="usageStatistics"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-13dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="-13dp"
+                    app:srcCompat="@drawable/statistics_icon" />
+
+                <TextView
+                    android:id="@+id/tvStatistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:drawableEnd="@drawable/ic_keyboard_a"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Space Usage"
+                    android:textColor="#FBF9F9"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

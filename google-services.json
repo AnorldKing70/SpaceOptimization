@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "203807159085",
+    "project_id": "space-optima",
+    "storage_bucket": "space-optima.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203807159085:android:e62b1ed362ba6c877bd9a4",
+        "android_client_info": {
+          "package_name": "com.example.spaceoptima"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203807159085-dco1psl314m9thnm346gdbsddjjfipvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbJba5_DVXfsBpI8CUfPwT_5yGEw_m8eY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203807159085-dco1psl314m9thnm346gdbsddjjfipvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
